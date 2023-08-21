@@ -1,6 +1,6 @@
 import "./ProductPreviewCard.scss"
 import imgDesktop from "../../../challenges_guide/product-preview-card-component-main/images/image-product-desktop.jpg"
-import imgMobile from "../../../challenges_guide/product-preview-card-component-main/images/image-product-mobile.jpg"
+// import imgMobile from "../../../challenges_guide/product-preview-card-component-main/images/image-product-mobile.jpg"
 import CartIcon from "../../../challenges_guide/product-preview-card-component-main/images/icon-cart.svg"
 
 const ProductPreviewCard = () => {
