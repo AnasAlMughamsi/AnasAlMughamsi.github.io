@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Accordion.scss"
 const Accordion = () => {
-  return (
+
+    const [boredData,setBoredData] = useState();
+
+    const url = "https://www.boredapi.com/api/activity";
+
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    async function fetchData() {
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            // console.log(`you could ${data.activity}`)
+            setBoredData(data.activity);
+        } catch(error) {
+            console.log(error)
+        }
+    }
+
+    
+    console.log("show me the bored data: ", boredData)
+
+    return (
     <main>
+
         <section id="test-1">
             <a href='#test-1'>Test 1 <span className='a11y-hidden'>Open</span></a>
             <a href='#'>Test 1 <span className='a11y-hidden'>Close</span></a>

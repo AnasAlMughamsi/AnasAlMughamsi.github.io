@@ -1,16 +1,18 @@
+// import Testimonials from './components/GridLayout/Testimonials'
 import './App.css'
-import ResultSummayCard from './components/ResultSummayCard/ResultSummayCard'
-import Accordion from './components/Accordion/Accordion'
-import ProductPreviewCard from './components/ProductPreviewCard/ProductPreviewCard'
+import LandingPage from './components/NewHomepage/LandingPage'
+// import RegisterFrom from './components/RegisterForm/RegisterFrom';
+
+
 
 function App() {
 
   return (
-    <>
-      {/* <Accordion/> */}
-      {/* <ResultSummayCard/> */}
-      <ProductPreviewCard/>
-    </>
+    <div className='app'>
+      {/* <RegisterFrom/> */}
+      {/* <Testimonials/> */}
+      <LandingPage/>
+    </div>
   )
 }
 

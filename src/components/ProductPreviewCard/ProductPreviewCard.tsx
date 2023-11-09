@@ -23,7 +23,7 @@ const ProductPreviewCard = () => {
             <p className="line-through">$169.99</p>
           </div>
           <div className="flex justify-center items-center ">
-            <button className="bg-dark-cyan text-white px-[3.5rem] flex justify-center items-center gap-3"> 
+            <button className="bg-dark-cyan text-white px-[3.5rem] flex justify-center items-center gap-3 btn"> 
               <img src={CartIcon} width={14}/> Add to Card
             </button>
           </div>

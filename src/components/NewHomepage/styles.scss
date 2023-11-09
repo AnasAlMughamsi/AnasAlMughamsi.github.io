@@ -1,0 +1,103 @@
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+
+
+    .navbar-items {
+        display: flex;
+        gap: 2rem;
+        color: #7b7c7c;
+        cursor: pointer;
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
+
+    .hamburger {
+        display: inline-block;
+        height: 26px;
+        margin-right: 27px;
+
+        .main-nav-toggle {
+            display: block;
+            width: 38px;
+            height: 25px;
+            position: relative;
+            
+            &:after,
+            &:before {
+                top: 0;
+                left: 0;
+                height: 0;
+                right: 0;
+                content: '';
+                position: absolute;
+                border-bottom: 4px solid black;
+                width: 100%;
+                transition: all ease-out 0.3s;
+                border-radius: 1px;
+            }
+            
+            &:after {
+                top: 100%;
+            }
+            
+            span {
+                border-radius: 1px;
+                display: block;
+                text-indent: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 4px;
+                background-color: black;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transition: all ease-out 0.2s;
+            }
+
+            &.active {
+                &:after {
+                    transform: rotate(-45deg);
+                    transform-origin: center;
+                    top: 50%;
+                }
+                
+                &:before {
+                    transform: rotate(45deg);
+                    transform-origin: center;
+                    top: 50%
+                }
+                
+                span {
+                    opacity: 0;
+                }
+            }
+
+
+
+            @media screen and (min-width: 750px) {
+                display: none;
+            }
+        }
+    }
+
+
+
+    .nav-items-mobile {
+        background-color: hsl(36, 100%, 99%);
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+
+        li {
+            font-size: 30px;
+            color: black;
+        }
+    }
+}
